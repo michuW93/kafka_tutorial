@@ -8,3 +8,10 @@
 - Data is kept for some time, default is one week.
 - Data is immutable, once written can't be changed.
 - Data is assigned randomly to a partition unless a key is provided.
+
+Example:
+We have three topics:
+- Topic-A with 3 partitions
+- Topic-B with 3 partitions
+- Topic-C with 4 partitions
+
