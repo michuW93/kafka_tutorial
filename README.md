@@ -15,3 +15,15 @@ We have three topics:
 - Topic-B with 3 partitions
 - Topic-C with 4 partitions
 
+Broker 1                                   Broker 2                                Broker 3
+
+Topic-A partition0                    Topic-A partition2                     Topic-A partition1
+
+Topic-B partition1                    Topic-B partition0
+
+Topic-C partition3
+
+Topic-C partition4                    Topic-C partition 0                    Topic-C partition1
+
+
+for Topic-C with 4 partitions there are two partitions in Broker 1.
