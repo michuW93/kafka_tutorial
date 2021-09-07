@@ -10,23 +10,10 @@
 - Data is assigned randomly to a partition unless a key is provided.
 
 Example:
-We have three topics:
-- Topic-A with 3 partitions
-- Topic-B with 3 partitions
-- Topic-C with 4 partitions
+We have two topics:
+- Topic-1 with 3 partitions
+- Topic-2 with 2 partitions
 
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topics_to_broker.png?raw=true)
 
-
-Broker 1                                   Broker 2                                Broker 3
-
-Topic-A partition0                    Topic-A partition2                     Topic-A partition1
-
-Topic-B partition1                    Topic-B partition0
-
-Topic-C partition3
-
-Topic-C partition4                    Topic-C partition 0                    Topic-C partition1
-
-
-for Topic-C with 4 partitions there are two partitions in Broker 1.
+if we would have Topic-3 with 4 partittions then two of them would be in the same broker.
