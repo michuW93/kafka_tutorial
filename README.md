@@ -16,4 +16,4 @@ We have two topics:
 
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topics_to_broker.png?raw=true)
 
-if we would have Topic-3 with 4 partittions then two of them would be in the same broker.
+if we would have Topic-3 with 4 partittions then two partitions would be in the same broker.
