@@ -15,7 +15,7 @@ We have three topics:
 - Topic-B with 3 partitions
 - Topic-C with 4 partitions
 
-![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topic_to_broker.png?raw=true)
+![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topics_to_broker.png?raw=true)
 
 
 Broker 1                                   Broker 2                                Broker 3
