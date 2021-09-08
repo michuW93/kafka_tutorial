@@ -24,3 +24,5 @@ Topics should have a replication factor > 1 (usually 3).
 Example:
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/KafkaReplication.PNG?raw=true)
 
+so every partition has leader and replications on another Brokers.
+When there would be topic with 3 partitions and replication factor 2 then we would have every partition on 2 Brokers.
