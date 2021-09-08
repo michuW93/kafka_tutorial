@@ -22,5 +22,5 @@ if we would have Topic-3 with 4 partittions then two partitions would be in the 
 
 Topics should have a replication factor > 1 (usually 3).
 Example:
-![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/KafkaReplication.png?raw=true)
+![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/KafkaReplication.PNG?raw=true)
 
