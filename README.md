@@ -48,5 +48,4 @@ Producers can choose to send a key with message (key can be anything string, num
  
 ## Consumer
 
-Consumers read data from a topic (identified by name)
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/kafka_consumers.png?raw=true)
