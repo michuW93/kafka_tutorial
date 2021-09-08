@@ -20,7 +20,7 @@ if we would have Topic-3 with 4 partittions then two partitions would be in the 
 
 
 
-Topics should have a replication factor > 1 (usually 3).
+Topics should have a replication factor > 1 (usually 3). So if the leader dies then other brokers still can serve data.
 Example:
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/KafkaReplication.PNG?raw=true)
 
