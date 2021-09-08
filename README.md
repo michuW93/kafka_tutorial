@@ -41,8 +41,9 @@ Producers can choose to receive acknowledgemet of data writes:
  
 
 Message keys:
-Producers can choose to send a key with message (ket can be anything string, number etc.)
+Producers can choose to send a key with message (key can be anything string, number etc.)
 - If key = null then data is sent round robin
 - If key is sent then all messages for that key will always go to the same partition
 
  
+## Consumer
