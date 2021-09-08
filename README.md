@@ -17,3 +17,9 @@ We have two topics:
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topics_to_broker.png?raw=true)
 
 if we would have Topic-3 with 4 partittions then two partitions would be in the same broker.
+
+
+
+Topics should have a replication factor > 1 (usually 3).
+Example:
+
