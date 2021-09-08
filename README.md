@@ -34,30 +34,15 @@ Each partition has one leader and many ISR
 ## Producers
 
 Producers are writing into topics.
-
 Producers can choose to receive acknowledgemet of data writes:
 - acks=0: producer wont wait for acknowledgement (possible data loss)
 - acks=1 (default): Producer will wait for leader acknowledgement (limited data loss)
-- Producers are writing into topics.
-
-Producers can choose to receive acknowledgemet of data writes:
-acks=0: producer wont wait for acknowledgement (possible data loss)
-
-Acks=1 (default): Producer will wait for leader acknowledgement (limited data loss)
-
-Acks = all: leader and all replicas acknowledgement (no data loss)
-
+- acks = all: leader and all replicas acknowledgement (no data loss)
  
 
 Message keys:
 Producers can choose to send a key with message (ket can be anything string, number etc.)
-
-If key = null then data is sent round robin
-
-If key is sent then all messages for that key will always go to the same partitionacks = all: leader and all replicas acknowledgement (no data loss)
+- If key = null then data is sent round robin
+- If key is sent then all messages for that key will always go to the same partition
 
  
-Message keys:
-Producers can choose to send a key with message (ket can be anything string, number etc.)
-If key = null then data is sent round robin
-If key is sent then all messages for that key will always go to the same partition
