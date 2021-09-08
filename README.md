@@ -26,3 +26,7 @@ Example:
 
 so every partition has leader and replications on another Brokers.
 When there would be topic with 3 partitions and replication factor 2 then we would have every partition on 2 Brokers.
+
+At any time only one broker can be a leader for a partition and only that leader can receive and serve data for a partition. Other brokers will synchronize the date.
+
+Each partition has one leader and many ISR
