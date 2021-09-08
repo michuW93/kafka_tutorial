@@ -49,3 +49,5 @@ Producers can choose to send a key with message (key can be anything string, num
 ## Consumer
 
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/kafka_consumers.png?raw=true)
+
+If there are more consumer than partitions then some consumers will be inactive
