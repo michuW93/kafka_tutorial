@@ -69,6 +69,9 @@ Every kafka broker is called bootstrap server.
 If we connect to one broker we are connected to the entire cluster because each broker knows everything about other brokers.
 
 Connection:
+
 Kafka client -------------connection+metadata request ----> kafka cluster where are all brokers
+
 Kafka client <------------- list of all brokers -------------------kafka cluster
+
 Kafka client now can connect to needed brokers
