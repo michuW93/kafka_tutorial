@@ -63,3 +63,12 @@ Consumer choose when to commit offsets and there are 3 ways:
 - At most once - offset is commited as soon as message is received but when something goes wrong message will be lost, wont be processed again
 - At least once - offsets are committed after the message is processed, if processing goes wrong then message will be read again but we need to remember then it can result in duplicates so we have to provide idempotent processing.
 - Exactly once - only Kafka for Kafka
+
+
+Every kafka broker is called bootstrap server.
+If we connect to one broker we are connected to the entire cluster because each broker knows everything about other brokers.
+
+Connection:
+Kafka client -------------connection+metadata request ----> kafka cluster where are all brokers
+Kafka client <------------- list of all brokers -------------------kafka cluster
+Kafka client now can connect to needed brokers
