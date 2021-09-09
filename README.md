@@ -51,3 +51,15 @@ Producers can choose to send a key with message (key can be anything string, num
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/kafka_consumers.png?raw=true)
 
 If there are more consumer than partitions then some consumers will be inactive
+
+## Offsets
+
+Kafka stores the offsets at which a consumer group has been reading.
+Offsets comitted live in a Kafka topic named __consumer__offsets.
+
+When consumer from consumer group has processed data received from Kafka then should commit offsets so then f consumer dies it's know how much were processed because of commited __consumer__offsets.
+
+Consumer choose when to commit offsets and there are 3 ways:
+- At most once - offset is commited as soon as message is received but when something goes wrong message will be lost, wont be processed again
+- At least once - offsets are committed after the message is processed, if processing goes wrong then message will be read again but we need to remember then it can result in duplicates so we have to provide idempotent processing.
+- Exactly once - only Kafka for Kafka
