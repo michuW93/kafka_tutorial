@@ -75,3 +75,21 @@ Kafka client -------------connection+metadata request ----> kafka cluster where 
 Kafka client <------------- list of all brokers -------------------kafka cluster
 
 Kafka client now can connect to needed brokers
+
+
+
+Zookeeper - manages brokers, helps in performing leader election, send notification to kafka when new topic arrives, broker dies etc. Kafka cant work without zookeeper. Zookeeper always operates on odd number of servers 3,5,7…
+
+ 
+
+ 
+
+Messages are appended to a topic-partition in the order they are sent.
+
+Consumers read messages in the order stored in a topic-partition.
+
+With a replication factor of N, producers and consmers can tolerate up to N-1 brokers being down. Replication factor 3 is good idea (allows for two broker to die).
+
+As long as the number of partitions remains constant for a topic (no new partition) the same key will always go to the same partition.
+
+If factor replication is 3 then every topic will live on 3 brokers.
