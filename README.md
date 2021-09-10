@@ -97,3 +97,6 @@ If factor replication is 3 then every topic will live on 3 brokers.
 
 ## Run kafka
 Download and add into PATH - open .bashrc file and add at the end: `export PATH=/home/michu/kafka_2.13-2.8.0/bin:$PATH` then in terminal `source .bashrc`
+
+1. start zookeeper: zookeeper-server-start.sh config/zookeeper.properties
+2. start kafka: kafka-server-start.sh config/server.properties
