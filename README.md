@@ -94,3 +94,6 @@ With a replication factor of N, producers and consmers can tolerate up to N-1 br
 As long as the number of partitions remains constant for a topic (no new partition) the same key will always go to the same partition.
 
 If factor replication is 3 then every topic will live on 3 brokers.
+
+## Run kafka
+Download and add into PATH - open .bashrc file and add at the end: `export PATH=/home/michu/kafka_2.13-2.8.0/bin:$PATH` then in terminal `source .bashrc`
