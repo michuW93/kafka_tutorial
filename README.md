@@ -1,4 +1,5 @@
 # kafka_tutorial
+following tutorial of Stephane Maarek
 
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topic_anatomy.png?raw=true)
 
