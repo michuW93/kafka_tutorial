@@ -110,3 +110,6 @@ To check current topics `kafka-topics.sh --zookeeper 127.0.0.181 --list` and to 
 ## Run producer
 `kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic` but this won't read old messages, only the new one. To see all messages:
 `kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning`
+
+Example:
+![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/kafka_messages.png?raw=true)
