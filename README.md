@@ -116,6 +116,6 @@ Example:
 
 as we can see without `--from-begining` consumer won't display previous messages, only those who are added when consumer is up will be displayed.
 
-## Consumers in group (id - name of app)
+## Consumers in group (group id - name of app)
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/many_consumers.png?raw=true)
 as we can see here, that messages are split between consumers because we have 3 partitions and two consumers. When we would have 3 consumers then messages would be split between 3 consumers. If one would die then again messages would go to two consumers. That's consumers group.
