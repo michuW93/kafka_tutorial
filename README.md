@@ -107,9 +107,13 @@ To run producer:
 
 To check current topics `kafka-topics.sh --zookeeper 127.0.0.181 --list` and to check one of topics `kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic topic_name --describe`
 
-## Run producer
+## Run consumer and consumers in group
 `kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic` but this won't read old messages, only the new one. To see all messages:
 `kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning`
 
 Example:
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/kafka_messages.png?raw=true)
+
+as we can see without `--from-begining` consumer won't display previous messages, only those who are added when consumer is up will be displayed.
+
+## Consumers in group (id - name of app)
