@@ -100,3 +100,13 @@ Download and add into PATH - open .bashrc file and add at the end: `export PATH=
 
 1. start zookeeper: zookeeper-server-start.sh config/zookeeper.properties
 2. start kafka: kafka-server-start.sh config/server.properties
+
+## Run producer
+To run producer:
+`kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic` or more options `kafka-console-producer.--broker-list 127.0.0.1:9092 --topic first_topic --producer-property acks=all`.
+
+To check current topics `kafka-topics.sh --zookeeper 127.0.0.181 --list` and to check one of topics `kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic topic_name --describe`
+
+## Run producer
+`kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic` but this won't read old messages, only the new one. To see all messages:
+`kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning`
