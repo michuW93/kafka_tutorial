@@ -124,4 +124,6 @@ as we can see here, that messages are split between consumers because we have 3 
 To check consumer groups: `kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list`
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/consumer_group.png?raw=true)
 
-on the screen above LAG for `first_topic` is 2 which means that there are two unread messages.
+on the screen above LAG for `first_topic` is 2 which means that there are two unread messages. If we read those messages and describe consumer group again then LAG will be 0.
+![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/consumer_groups_lag0.png?raw=true)
+
