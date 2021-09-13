@@ -127,3 +127,8 @@ To check consumer groups: `kafka-consumer-groups.sh --bootstrap-server localhost
 on the screen above LAG for `first_topic` is 2 which means that there are two unread messages. If we read those messages and describe consumer group again then LAG will be 0.
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/consumer_groups_lag0.png?raw=true)
 
+## Resetting offsets
+Offsets can be changed e.g: `kafka-consumer-groups --bootstrap-server localhost:9092 --group first_app --reset-offsets --to-earliest --execute --topic first_topic` so now for every partition new offset will be zero, so we can read all messages from start again. 
+`kafka-consumer-groups --bootstrap-server localhost:9092 --group first_app --reset-offsets --shift-by 2 --execute --topic first_topic` will shift offsets from e.g 11 to 13, from 14 to 16 for each partition. We can also shift backwords with `kafka-consumer-groups --bootstrap-server localhost:9092 --group first_app --reset-offsets --shift-by -2 --execute --topic first_topic`
+
+Sum up: kafka-topics CLI needs to connect to Zookeeper while kafka-console-producer needs to connect to kafka. If you produce topic that doesn't exists then by default you'll see WARN and Kafka will auto create the topic. 
