@@ -134,3 +134,8 @@ Offsets can be changed e.g:
 - We can also shift backwords with `kafka-consumer-groups --bootstrap-server localhost:9092 --group first_app --reset-offsets --shift-by -2 --execute --topic first_topic`
 
 Sum up: kafka-topics CLI needs to connect to Zookeeper while kafka-console-producer needs to connect to kafka. If you produce topic that doesn't exists then by default you'll see WARN and Kafka will auto create the topic. 
+
+## Reading message in console when java application produce topic
+![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/java_producer.png?raw=true)
+
+
