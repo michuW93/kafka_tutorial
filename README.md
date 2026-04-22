@@ -139,3 +139,37 @@ Sum up: kafka-topics CLI needs to connect to Zookeeper while kafka-console-produ
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/java_producer.png?raw=true)
 
 
+## What is rebalancing in Kafka?
+Kafka rebalancing happens when Kafka redistributes partitions across consumers or brokers to maintain even load and ensure fault tolerance. It occurs automatically when the cluster changes.
+
+Two types of rebalancing:
+1. Consumer Group Rebalancing
+This is the most common one.
+
+A consumer group shares partitions of a topic.
+Kafka must ensure each partition is consumed by exactly one consumer.
+
+Rebalancing happens when:
+- a consumer joins the group
+- a consumer leaves or crashes
+- a consumer takes too long to heartbeat
+- topic partitions increase
+- consumer group coordinator restarts
+
+What Kafka does:
+- pauses consumption
+- redistributes partitions among consumers
+- resumes consumption
+
+Example:
+Topic: 6 partitions
+Consumers: C1, C2, C3
+
+If C3 crashes:
+C1 → 3 partitions
+C2 → 3 partitions
+
+This redistribution is the rebalance.
+
+Summary:
+Kafka rebalancing is the process of redistributing partitions across consumers or brokers when the cluster changes. <b>Consumer rebalancing ensures each partition is processed by exactly one consumer, while broker rebalancing ensures even load and fault tolerance</b>. It’s necessary for availability but can cause temporary pauses, which is why Kafka introduced incremental cooperative rebalancing.
