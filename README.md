@@ -157,13 +157,13 @@ What Kafka does:
 - redistributes partitions among consumers
 - resumes consumption
 
-Example:
-Topic: 6 partitions
-Consumers: C1, C2, C3
+Example: <br>
+Topic: 6 partitions <br>
+Consumers: C1, C2, C3 <br>
 
-If C3 crashes:
-C1 → 3 partitions
-C2 → 3 partitions
+If C3 crashes: <br>
+C1 → 3 partitions <br>
+C2 → 3 partitions <br>
 
 This redistribution is the rebalance.
 
