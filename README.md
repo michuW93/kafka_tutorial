@@ -142,10 +142,6 @@ Sum up: kafka-topics CLI needs to connect to Zookeeper while kafka-console-produ
 ## What is rebalancing in Kafka?
 Kafka rebalancing happens when Kafka redistributes partitions across consumers or brokers to maintain even load and ensure fault tolerance. It occurs automatically when the cluster changes.
 
-Two types of rebalancing:
-1. Consumer Group Rebalancing
-This is the most common one.
-
 A consumer group shares partitions of a topic.
 Kafka must ensure each partition is consumed by exactly one consumer.
 
