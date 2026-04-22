@@ -1,6 +1,13 @@
 # kafka_tutorial
 following tutorial of Stephane Maarek
 
+A Kafka <b>topic</b> is a named stream of messages. Producers write to it, consumers read from it.
+A topic is split into partitions. Partitions are the physical storage units of a topic.
+
+Each partition contains a <b>different subset of the topic’s data</b>.
+<b>Partitions do NOT contain the same data.</b> Without partitions, Kafka would be a single slow queue.
+
+
 ![alt text](https://github.com/michuW93/kafka_tutorial/blob/master/topic_anatomy.png?raw=true)
 
 - Topic in kafka has by default 3 partitions but it's configurable.
